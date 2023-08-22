@@ -27,7 +27,7 @@ class CrearPreguntaApp:
         self.salir_button.pack(pady=10)
 
         self.conexion = mysql.connector.connect(
-            host="127.0.0.1",  # Cambia esto a la dirección de tu servidor MySQL
+            host="127.0.0.1", 
             user="root",
             password="Emilio12345.",
             database="neoguias"
