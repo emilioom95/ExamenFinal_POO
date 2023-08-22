@@ -1,16 +1,15 @@
+#EXAMEN FINAL DE POO
+#JOSE EMILIO OYERVIDE MOSCOSO
+#AGOSTO 2023
+
 import tkinter as tk
 import random
 import mysql.connector
 from tkinter import messagebox
 from InterfazPreguntas import CrearPreguntaApp
 
-root_style = {"bg": "blue"}
-label_style = {"font": ("Arial", 16), "bg": "blue", "fg": "white"}
-entry_style = {"font": ("Arial", 14)}
-button_style = {"font": ("Arial", 14), "bg": "green", "fg": "white", "width": 15}
-
-
 class PreguntasApp:
+    #CREACION DE LA PRIMERA INTERFAZ GRAFICA
     def __init__(self, root, nombre):
         self.root = root
         self.nombre = nombre
@@ -29,6 +28,7 @@ class PreguntasApp:
         self.result_button.pack(pady=5)
         self.salir_button.pack(pady=5)
 
+        #CONEXION CON LA BASE DE DATOS
         self.conexion = mysql.connector.connect(
             host="127.0.0.1",
             user="root",
